@@ -8,7 +8,7 @@ import { AppService } from './app.service';
 import { AppCustomFilterException } from './app.exception.filter';
 
 @Controller()
-@UseFilters(AppCustomFilterException)
+// @UseFilters(AppCustomFilterException)
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
