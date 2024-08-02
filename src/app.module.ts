@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { APP_FILTER } from '@nestjs/core';
 import { AppCustomFilterException } from './app.exception.filter';
 import { UsersModule } from './users/users.module';
+import { AllExceptionsFilter } from './all.exception.filter';
 
 @Module({
   imports: [UsersModule],
@@ -12,7 +13,7 @@ import { UsersModule } from './users/users.module';
     AppService,
     {
       provide: APP_FILTER,
-      useClass: AppCustomFilterException,
+      useClass: AllExceptionsFilter,
     },
   ],
 })

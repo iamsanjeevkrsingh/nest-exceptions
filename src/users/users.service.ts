@@ -1,16 +1,11 @@
-import {
-  BadGatewayException,
-  BadRequestException,
-  ForbiddenException,
-  Injectable,
-} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
   create(createUserDto: CreateUserDto) {
-    throw new BadGatewayException();
+    // throw new BadGatewayException();
     return 'This action adds a new user';
   }
 
